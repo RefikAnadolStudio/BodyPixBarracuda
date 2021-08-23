@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using Klak.TestTools;
 using BodyPix;
 
+// Duplicated from the existing Visualizer for rapid testing
+// Nearly identical to the original at the moment
 public sealed class CustomVisualizer : MonoBehaviour
 {
     [SerializeField] CustomImageSource _source = null;
@@ -16,6 +18,11 @@ public sealed class CustomVisualizer : MonoBehaviour
     BodyDetector _detector;
     Material _material;
     RenderTexture _mask;
+
+    void Reset()
+    {
+        if(_source == null) _source = gameObject.GetComponent<CustomImageSource>() as CustomImageSource;
+    }
 
     void Start()
     {

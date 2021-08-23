@@ -4,6 +4,9 @@ using UnityEngine.Video;
 
 namespace Klak.TestTools {
 
+// Separated from the package controlled version for local tweaking and iteration
+// Otherwise identical to keijiro's implementation for the moment
+
 public sealed class CustomImageSource : MonoBehaviour
 {
     #region Public property
